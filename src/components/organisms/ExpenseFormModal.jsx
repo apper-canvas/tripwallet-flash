@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Receipt } from 'lucide-react';
 import Modal from '@/components/atoms/Modal';
 import ModalHeader from '@/components/molecules/ModalHeader';
 import FormField from '@/components/molecules/FormField';
 import Button from '@/components/atoms/Button';
-
+import ReceiptUploadModal from '@/components/organisms/ReceiptUploadModal';
 const ExpenseFormModal = ({
     isOpen,
     onClose,
@@ -15,6 +16,8 @@ const ExpenseFormModal = ({
     categories,
     currencies
 }) => {
+    const [showReceiptModal, setShowReceiptModal] = useState(false);
+    
     const handleClose = () => {
         onClose();
         // Reset form data if closing without saving
@@ -30,6 +33,19 @@ const ExpenseFormModal = ({
         });
     };
 
+    const handleReceiptData = (receiptData) => {
+        // Pre-fill form with OCR data
+        setFormData(prevData => ({
+            ...prevData,
+            merchant: receiptData.merchant || prevData.merchant,
+            amount: receiptData.amount || prevData.amount,
+            date: receiptData.date || prevData.date,
+            category: receiptData.category || prevData.category,
+            currency: receiptData.currency || prevData.currency,
+            notes: receiptData.notes || prevData.notes
+        }));
+        setShowReceiptModal(false);
+    };
     return (
         <Modal isOpen={isOpen} onClose={handleClose}>
             <ModalHeader title={editingExpense ? 'Edit Expense' : 'Add New Expense'} onClose={handleClose} />
@@ -110,7 +126,20 @@ const ExpenseFormModal = ({
                     type="checkbox"
                     checked={formData.isReimbursable}
                     onChange={(e) => setFormData({ ...formData, isReimbursable: e.target.checked })}
-                />
+/>
+
+                {/* Receipt Upload Button */}
+                <div className="pt-2 pb-2 border-t border-surface-200">
+                    <Button
+                        type="button"
+                        variant="outline"
+                        onClick={() => setShowReceiptModal(true)}
+                        className="w-full"
+                    >
+                        <Receipt className="w-4 h-4 mr-2" />
+                        Upload Receipt & Auto-Fill
+                    </Button>
+                </div>
 
                 <div className="flex space-x-3 pt-4">
                     <Button
@@ -128,7 +157,16 @@ const ExpenseFormModal = ({
                         {editingExpense ? 'Update Expense' : 'Add Expense'}
                     </Button>
                 </div>
-            </form>
+</form>
+
+            {/* Receipt Upload Modal */}
+            <ReceiptUploadModal
+                isOpen={showReceiptModal}
+                onClose={() => setShowReceiptModal(false)}
+                onConfirm={handleReceiptData}
+                categories={categories}
+                currencies={currencies}
+            />
         </Modal>
     );
 };

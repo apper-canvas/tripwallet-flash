@@ -25,6 +25,16 @@ const FormField = ({ label, id, type = 'text', options, children, required, ...p
                     {...props}
                 />
             );
+        } else if (type === 'file') {
+            return (
+                <Input
+                    id={id}
+                    type="file"
+                    required={required}
+                    className="file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-primary file:text-white hover:file:bg-primary/90"
+                    {...props}
+                />
+            );
         } else if (type === 'checkbox') {
             return (
                 <Checkbox
