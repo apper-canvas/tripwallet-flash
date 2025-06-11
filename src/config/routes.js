@@ -1,8 +1,8 @@
-import Dashboard from '../pages/Dashboard';
-import Trips from '../pages/Trips';
-import Expenses from '../pages/Expenses';
-import Reports from '../pages/Reports';
-import Settings from '../pages/Settings';
+import HomePage from '@/components/pages/HomePage';
+import TripsPage from '@/components/pages/TripsPage';
+import ExpensesPage from '@/components/pages/ExpensesPage';
+import ReportsPage from '@/components/pages/ReportsPage';
+import SettingsPage from '@/components/pages/SettingsPage';
 
 export const routes = {
   dashboard: {
@@ -10,35 +10,35 @@ export const routes = {
     label: 'Dashboard',
     path: '/dashboard',
     icon: 'LayoutDashboard',
-    component: Dashboard
+component: HomePage
   },
   trips: {
     id: 'trips',
     label: 'Trips',
     path: '/trips',
     icon: 'MapPin',
-    component: Trips
+component: TripsPage
   },
   expenses: {
     id: 'expenses',
     label: 'Expenses',
     path: '/expenses',
     icon: 'Receipt',
-    component: Expenses
+component: ExpensesPage
   },
   reports: {
     id: 'reports',
     label: 'Reports',
     path: '/reports',
     icon: 'FileText',
-    component: Reports
+component: ReportsPage
   },
   settings: {
     id: 'settings',
     label: 'Settings',
     path: '/settings',
     icon: 'Settings',
-    component: Settings
+component: SettingsPage
   }
 };
 
