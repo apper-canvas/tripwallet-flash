@@ -8,6 +8,8 @@ import CategorySpendingBreakdown from '@/components/organisms/CategorySpendingBr
 import CurrencyExchangeRatesWidget from '@/components/organisms/CurrencyExchangeRatesWidget';
 import QuickAddExpenseFormModal from '@/components/organisms/QuickAddExpenseFormModal';
 import ErrorMessage from '@/components/atoms/ErrorMessage';
+import Button from '@/components/atoms/Button';
+import ApperIcon from '@/components/atoms/ApperIcon';
 
 const HomePage = () => {
   const [trips, setTrips] = useState([]);

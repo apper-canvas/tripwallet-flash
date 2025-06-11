@@ -5,13 +5,15 @@ import dashboardService from './api/dashboardService';
 import categoryService from './api/categoryService';
 import receiptService from './api/receiptService';
 import ocrService from './api/ocrService';
+import exchangeRateService from './api/exchangeRateService';
 
 export {
     tripService,
     expenseService,
     userService,
-dashboardService,
+    dashboardService,
     categoryService,
     receiptService,
-    ocrService
+    ocrService,
+    exchangeRateService
 };
