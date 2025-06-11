@@ -1,0 +1,74 @@
+[
+  {
+    "from": "USD",
+    "to": "EUR",
+    "rate": 0.85,
+    "timestamp": "2024-01-20T10:00:00.000Z"
+  },
+  {
+    "from": "USD",
+    "to": "GBP",
+    "rate": 0.78,
+    "timestamp": "2024-01-20T10:00:00.000Z"
+  },
+  {
+    "from": "USD",
+    "to": "JPY",
+    "rate": 148.50,
+    "timestamp": "2024-01-20T10:00:00.000Z"
+  },
+  {
+    "from": "USD",
+    "to": "CAD",
+    "rate": 1.35,
+    "timestamp": "2024-01-20T10:00:00.000Z"
+  },
+  {
+    "from": "USD",
+    "to": "AUD",
+    "rate": 1.52,
+    "timestamp": "2024-01-20T10:00:00.000Z"
+  },
+  {
+    "from": "EUR",
+    "to": "USD",
+    "rate": 1.18,
+    "timestamp": "2024-01-20T10:00:00.000Z"
+  },
+  {
+    "from": "EUR",
+    "to": "GBP",
+    "rate": 0.92,
+    "timestamp": "2024-01-20T10:00:00.000Z"
+  },
+  {
+    "from": "GBP",
+    "to": "USD",
+    "rate": 1.28,
+    "timestamp": "2024-01-20T10:00:00.000Z"
+  },
+  {
+    "from": "GBP",
+    "to": "EUR",
+    "rate": 1.09,
+    "timestamp": "2024-01-20T10:00:00.000Z"
+  },
+  {
+    "from": "JPY",
+    "to": "USD",
+    "rate": 0.0067,
+    "timestamp": "2024-01-20T10:00:00.000Z"
+  },
+  {
+    "from": "CAD",
+    "to": "USD",
+    "rate": 0.74,
+    "timestamp": "2024-01-20T10:00:00.000Z"
+  },
+  {
+    "from": "AUD",
+    "to": "USD",
+    "rate": 0.66,
+    "timestamp": "2024-01-20T10:00:00.000Z"
+  }
+]
