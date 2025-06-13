@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from '@/components/atoms/Button';
-import ApperIcon from '@/components/ApperIcon';
-import Text from '@/components/atoms/Text';
+import Button from '@/components/atoms/Button'
+import ApperIcon from '@/components/ApperIcon'
+import Text from '@/components/atoms/Text'
 
 const PageHeader = ({ title, subtitle, onAddClick, addLabel, addIcon = 'Plus' }) => {
     return (

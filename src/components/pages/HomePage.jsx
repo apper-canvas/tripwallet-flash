@@ -9,8 +9,7 @@ import CurrencyExchangeRatesWidget from '@/components/organisms/CurrencyExchange
 import QuickAddExpenseFormModal from '@/components/organisms/QuickAddExpenseFormModal';
 import ErrorMessage from '@/components/atoms/ErrorMessage';
 import Button from '@/components/atoms/Button';
-import ApperIcon from '@/components/atoms/ApperIcon';
-
+import ApperIcon from '@/components/ApperIcon';
 const HomePage = () => {
   const [trips, setTrips] = useState([]);
   const [expenses, setExpenses] = useState([]);
